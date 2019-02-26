@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
-import { VictoryChart, VictoryTheme, VictoryLine } from 'victory';
+import { VictoryChart, VictoryTheme, VictoryLine, VictoryAxis } from 'victory';
 
 class CoinDetails extends Component {
   render() {
+    const { prices } = this.props;
     return (
       <div>
-        Prices for BitCoin in the past month:{' '}
-        {this.props.prices.map(price => {
-          return <li key={price.time}>{price.close}</li>;
-        })}
+        <VictoryChart theme={VictoryTheme.material}>
+          <VictoryLine
+            style={{ data: { stroke: 'red' } }}
+            data={prices}
+            x={0}
+            y="close"
+          />
+        </VictoryChart>
       </div>
     );
   }
