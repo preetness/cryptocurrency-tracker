@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+import CoinDetails from './CoinDetails';
 
 class App extends Component {
   render() {
-    return <div>App</div>;
+    return (
+      <div>
+        <CoinDetails />
+      </div>
+    );
   }
 }
 
