@@ -7,7 +7,12 @@ class CoinDetails extends Component {
     return (
       <div>
         <VictoryChart theme={VictoryTheme.material}>
-          <VictoryLine data={prices} x={0} y="close" />
+          <VictoryLine
+            style={{ data: { stroke: 'red' } }}
+            data={prices}
+            x={0}
+            y="close"
+          />
         </VictoryChart>
       </div>
     );
