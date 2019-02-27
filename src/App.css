@@ -7,3 +7,13 @@
   line-height: 1.1em;
   letter-spacing: 0.03em;
 }
+
+.current-price {
+  text-align: center;
+  margin-top: 10%;
+  font-size: 1.5em;
+}
+
+.icons {
+  text-align: center;
+}

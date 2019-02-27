@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { VictoryChart, VictoryTheme, VictoryLine, VictoryAxis } from 'victory';
+import { VictoryChart, VictoryTheme, VictoryLine } from 'victory';
 
 class CoinDetails extends Component {
   render() {

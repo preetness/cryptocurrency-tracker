@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import CoinDetails from './CoinDetails';
 import CoinList from './CoinList';
 import axios from 'axios';
-import * as V from 'victory';
 
 class App extends Component {
   state = {
@@ -26,17 +24,44 @@ class App extends Component {
           coinName: 'BitCoin',
           prices: response.data.Data
         });
-        console.log(this.state.price);
       });
   }
   render() {
+    const { coinName, prices } = this.state;
     return (
       <div className="ui container box">
         <h2 className="ui header title">
           <i className="bitcoin icon" />
           <div className="content title">Cryptocurrency Tracker</div>
         </h2>
+
         <div className="ui section divider" />
+        <section className="icons">
+          <button className="ui primary basic icon button">
+            <i className="bitcoin icon" />
+            BitCoin
+          </button>
+          <button className="ui primary basic icon button">
+            <i className="ethereum icon" />
+            Ethereum
+          </button>
+          <button className="ui primary basic icon button">
+            <i className="btc icon" />
+            BitCoin Cash
+          </button>
+        </section>
+        {prices.length === 0 ? (
+          <div className="ui segment">
+            <div className="ui active inverted dimmer">
+              <div className="ui text loader">Loading</div>
+            </div>
+            <p />
+          </div>
+        ) : (
+          <h3 className="current-price">
+            {coinName} Current Price: ${prices[prices.length - 1].close} USD
+          </h3>
+        )}
         <CoinList name={this.state.coinName} prices={this.state.prices} />
       </div>
     );
