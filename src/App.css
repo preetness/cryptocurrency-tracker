@@ -10,7 +10,7 @@
 
 .current-price {
   text-align: center;
-  margin-top: 10%;
+  margin-top: 5%;
   font-size: 1.5em;
 }
 
@@ -22,4 +22,8 @@
   text-align: center;
   color: blue;
   font-size: 3em;
+}
+
+.select-currency {
+  text-align: center;
 }
