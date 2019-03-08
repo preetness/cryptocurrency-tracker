@@ -12,21 +12,6 @@ class App extends Component {
 
   API_KEY = '4b45d9be07f3f088f9eb659db5f76df3df85bc6f8834fcf8cdd809317158077a';
 
-  componentDidMount() {
-    axios
-      .get(
-        `https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&api_key=${
-          this.API_KEY
-        }`
-      )
-      .then(response => {
-        this.setState({
-          coinName: 'BitCoin',
-          prices: response.data.Data
-        });
-      });
-  }
-
   getCoin(coin) {
     axios
       .get(
