@@ -17,3 +17,9 @@
 .icons {
   text-align: center;
 }
+
+.thirty-day-price {
+  text-align: center;
+  color: blue;
+  font-size: 3em;
+}
