@@ -21,9 +21,10 @@
 .thirty-day-price {
   text-align: center;
   color: blue;
-  font-size: 3em;
+  font-size: 2em;
 }
 
 .select-currency {
   text-align: center;
+  font-size: 2.5em;
 }

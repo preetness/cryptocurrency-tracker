@@ -62,7 +62,6 @@ class App extends Component {
           <i className="bitcoin icon" />
           <div className="content title">Cryptocurrency Tracker</div>
         </h2>
-
         <div className="ui section divider" />
         <section className="icons">
           <button
@@ -95,8 +94,12 @@ class App extends Component {
             {coinName} Current Price: ${closingPrice} USD
           </h3>
         )}
-        <h3 className="thirty-day-price">30 Day Price Chart:</h3>
-        <CoinList name={this.state.coinName} prices={this.state.prices} />
+        {closingPrice !== null && (
+          <div>
+            <h3 className="thirty-day-price">30 Day Price Chart:</h3>
+            <CoinList name={coinName} prices={prices} />
+          </div>
+        )}
       </div>
     );
   }
