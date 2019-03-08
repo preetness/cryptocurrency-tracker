@@ -62,6 +62,7 @@ class App extends Component {
             {coinName} Current Price: ${prices[prices.length - 1].close} USD
           </h3>
         )}
+        <h3 className="thirty-day-price">30 Day Price Chart:</h3>
         <CoinList name={this.state.coinName} prices={this.state.prices} />
       </div>
     );
