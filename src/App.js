@@ -15,7 +15,7 @@ class App extends Component {
   getCoin(coin) {
     axios
       .get(
-        `https://min-api.cryptocompare.com/data/price?fsym=${coin}&tsyms=USD&api_key=${
+        `https://cors.io/?https://min-api.cryptocompare.com/data/price?fsym=${coin}&tsyms=USD&api_key=${
           this.API_KEY
         }`
       )
@@ -27,7 +27,7 @@ class App extends Component {
       });
     axios
       .get(
-        `https://min-api.cryptocompare.com/data/histoday?fsym=${coin}&tsym=USD&api_key=${
+        `https://cors.io/?https://min-api.cryptocompare.com/data/histoday?fsym=${coin}&tsym=USD&api_key=${
           this.API_KEY
         }`
       )
