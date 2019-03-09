@@ -51,14 +51,14 @@ class App extends Component {
         <section className="icons">
           <button
             onClick={() => this.getCoin('BTC')}
-            className="ui primary basic icon button"
+            className="positive ui icon button"
           >
             <i className="bitcoin icon" />
             BitCoin
           </button>
           <button
             onClick={() => this.getCoin('ETH')}
-            className="ui primary basic icon button"
+            className="positive ui icon button"
           >
             <i className="ethereum icon" />
             Ethereum
@@ -66,7 +66,7 @@ class App extends Component {
 
           <button
             onClick={() => this.getCoin('BCH')}
-            className="ui primary basic icon button"
+            className="positive ui icon button"
           >
             <i className="btc icon" />
             BitCoin Cash
