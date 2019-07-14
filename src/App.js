@@ -10,13 +10,11 @@ class App extends Component {
     closingPrice: null
   };
 
-  API_KEY = '4b45d9be07f3f088f9eb659db5f76df3df85bc6f8834fcf8cdd809317158077a';
-
   getCoin(coin) {
     axios
       .get(
-        `https://cors.io/?https://min-api.cryptocompare.com/data/price?fsym=${coin}&tsyms=USD&api_key=${
-          this.API_KEY
+        `https://cors-anywhere.herokuapp.com/https://min-api.cryptocompare.com/data/price?fsym=${coin}&tsyms=USD&api_key=${
+          process.env.REACT_APP_API_KEY
         }`
       )
       .then(response => {
@@ -27,7 +25,7 @@ class App extends Component {
       });
     axios
       .get(
-        `https://cors.io/?https://min-api.cryptocompare.com/data/histoday?fsym=${coin}&tsym=USD&api_key=${
+        `https://cors-anywhere.herokuapp.com/https://min-api.cryptocompare.com/data/histoday?fsym=${coin}&tsym=USD&api_key=${
           this.API_KEY
         }`
       )
